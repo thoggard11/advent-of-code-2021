@@ -34,8 +34,8 @@ const INPUTS = [
 const ANSWERS = {
   "1-1": countIncreasingValues,
   "1-2": countIncreasingValuesBy3,
-  "2-1": () => console.log("Day 2 - Puzzle 1"),
-  "2-2": () => console.log("Day 2 - Puzzle 2"),
+  "2-1": horizontalDepthMultiply,
+  "2-2": depthMultiplyByAim,
   "3-1": () => console.log("Day 3 - Puzzle 1"),
   "3-2": () => console.log("Day 3 - Puzzle 2"),
   "4-1": () => console.log("Day 4 - Puzzle 1"),
