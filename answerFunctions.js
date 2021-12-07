@@ -36,7 +36,7 @@ const ANSWERS = {
   "1-2": countIncreasingValuesBy3,
   "2-1": horizontalDepthMultiply,
   "2-2": depthMultiplyByAim,
-  "3-1": () => console.log("Day 3 - Puzzle 1"),
+  "3-1": binaryCountAndMultiply,
   "3-2": () => console.log("Day 3 - Puzzle 2"),
   "4-1": () => console.log("Day 4 - Puzzle 1"),
   "4-2": () => console.log("Day 4 - Puzzle 2"),

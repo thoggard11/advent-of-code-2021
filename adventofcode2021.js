@@ -54,7 +54,7 @@ function horizontalDepthMultiply(input) {
 }
 
 // Day 2 Puzzle 2
-// Determines ship's depth and horizontal position and multiplies the values
+// Determines ship's aim, depth, and horizontal position and multiplies the values
 function depthMultiplyByAim(input) {
     const movementArr = input.split('\n');
     let aim = 0;
@@ -80,4 +80,41 @@ function depthMultiplyByAim(input) {
     console.log(depth);
     console.log(horizontalDistance);
     return depth * horizontalDistance;
+}
+
+// Day 3 Puzzle 1
+// Counts the Nth bit of each number to create a new binary number, change to decimal, and multiply
+function binaryCountAndMultiply(input) {
+    const binaryArr = input.split('\n');
+    let nonBinaryArr = new Array(binaryArr[0].length).fill(0);
+    let gammaStr = '';
+    let epsilonStr = '';
+
+    for (let i = 0; i < binaryArr.length; i++) {
+        for (let j = 0; j < binaryArr[i].length; j++) {
+            if (binaryArr[i].charAt(j) === '1') {
+                nonBinaryArr[j] += 1;
+            } else if (binaryArr[i].charAt(j) === '0') {
+                nonBinaryArr[j] -= 1;
+            }
+        }
+    }
+
+    for (i = 0; i < nonBinaryArr.length; i++) {
+        if (Number(nonBinaryArr[i]) > 0) {
+            gammaStr += '1';
+            epsilonStr += '0';
+        } else {
+            gammaStr += '0';
+            epsilonStr += '1';
+        }
+    }
+
+    // console.log(gammaStr);
+    // console.log(epsilonStr);
+    // console.log(parseInt(gammaStr, 2));
+    // console.log(parseInt(epsilonStr, 2));
+
+    let bitMultiply = parseInt(gammaStr, 2) * parseInt(epsilonStr, 2);
+    return bitMultiply;
 }
